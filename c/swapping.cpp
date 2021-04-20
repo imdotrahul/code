@@ -7,6 +7,6 @@ int main()
     temp=a;
     a=b;
     b=temp;
-    cout<<"after swapping"<<a<<b;
+    cout<<"after swapping"<<a<<b<<endl;
     return 0;
 }

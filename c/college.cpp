@@ -13,7 +13,7 @@ class alpha
                        {
                                    cout<<"x="<<x<<"\n";
                        }
-};
+}; 
 class beta
 {
            float y;

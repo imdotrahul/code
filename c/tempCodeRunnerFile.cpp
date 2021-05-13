@@ -1,51 +1,54 @@
 #include<iostream>
 using namespace std;
-class area
+class alpha
 {
-  int a,l,b;
-  public:
-  area() 
-  {
-     l=5;
-     b=6;
-     cout<<"Simple constructor called\n";
-     cout<<"length="<<l<<"\nbreadth="<<b<<endl;
-  }
-  area(int x,int y) 
-  {
-     l=x;
-     b=y;
-  }
-  void calc();
-  void print();
-  ~area();
-
+	int x;
+	public:
+		alpha(int i)
+		{
+			x=i;
+			cout<<"alpha initialized\n";
+		}
+		void show_x()
+		{
+			cout<<"x="<<x<<"\n";
+		}
 };
-void area::calc()
+class beta
 {
-   a=l*b;
-}
-void area::print()
+	float y;
+	public:
+		beta(float j)
+		{
+			y=j;
+			cout<<"beta initialized\n";
+		}
+		void show_y()
+		{
+			cout<<"y="<<y<<"\n";
+		}
+};
+class gamma : public beta,public alpha
 {
-   cout<<"Area is : "<<a<<endl;
-}
-area::~area()
-{
-cout << "Object is being deleted" << endl;
-}
+	int m,n;
+	public:
+		gamma(int a,float b,int c,int d): alpha(a),beta(b)
+		{
+			m=c,n=d;
+			cout<<"gamma initialized\n";
+		}
+		void show_mn()
+		{
+			cout<<"m="<<m<<"\n";
+			cout<<"n="<<n<<"\n";
+		}
+};
+
 int main()
 {
-   int l,b;
-   area a1; 
-   a1.calc();
-   a1.print();
-   cout<<"Enter length and breadth for parameterised        constructor:\n";
-   cin>>l>>b;
-   area a2(l,b); 
-   a2.calc();
-   a2.print();
-   return 0;
-
+	gamma g(5,10.75,20,30);
+	g.show_x();
+	g.show_y();
+	g.show_mn();
+	return 0;
 }
-
- 

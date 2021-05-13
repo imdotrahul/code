@@ -1,53 +1,46 @@
-#include<iostream>
+#include <iostream>
+#include <fstream>
 using namespace std;
-class alpha
+class student
 {
-           int x;
-           public:
-                       alpha(int i)
-                       {
-                                   x=i;
-                                   cout<<"alpha initialized\n";
-                       }
-                       void show_x()
-                       {
-                                   cout<<"x="<<x<<"\n";
-                       }
-}; 
-class beta
-{
-           float y;
-           public:
-                       beta(float j)
-                       {
-                                   y=j;
-                                   cout<<"beta initialized\n";
-                       }
-                       void show_y()
-                       {
-                                   cout<<"y="<<y<<"\n";
-                       }
-};
-class gamma : public beta,public alpha
-{
-           int m,n;
-           public:
-                gamma(int a,float b,int c,int d): alpha(a),beta(b)
-                {
-                        m=c,n=d;
-                        cout<<"gamma initialized\n";
-                }
-                void show_mn()
-                {
-                        cout<<"m="<<m<<"\n";
-                        cout<<"n="<<n<<"\n";
-                }
+  private:
+      char name[30];
+      int age;
+  public:
+      void getData(void)
+{ cout<<"Enter name:"; cin.getline(name,30);
+cout<<"Enter age:"; cin>>age;
+      }
+      void showData(void)
+      {
+cout<<"Name:"<<name<<",Age:"<<age<<endl;
+      }
 };
 int main()
 {
-           gamma g(5,10.75,20,30);
-           g.show_x();
-           g.show_y();
-           g.show_mn();
-           return 0;
+  student s;
+ofstream file;
+file.open("aaa.txt",ios::out);
+  if(!file)
+  {
+cout<<"Error in creating file.."<<endl;
+     return 0;
+  }
+cout<<"\nFile created successfully."<<endl;
+s.getData();   
+file.write((char*)&s,sizeof(s));   
+file.close();  
+cout<<"\nFile saved and closed succesfully."<<endl;
+ifstream file1;
+  file1.open("aaa.txt",ios::in);
+  if(!file1){
+cout<<"Error in opening file..";
+      return 0;
+  }
+  file1.read((char*)&s,sizeof(s));
+s.showData();
+  file1.close();
+  return 0;
 }
+
+

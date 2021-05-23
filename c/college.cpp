@@ -1,46 +1,36 @@
 #include <iostream>
-#include <fstream>
 using namespace std;
-class student
+class Number
 {
   private:
-      char name[30];
-      int age;
+  int num;
   public:
-      void getData(void)
-{ cout<<"Enter name:"; cin.getline(name,30);
-cout<<"Enter age:"; cin>>age;
-      }
-      void showData(void)
-      {
-cout<<"Name:"<<name<<",Age:"<<age<<endl;
-      }
+                            
+  Number()
+  {
+     num=0;
+  };
+                              
+  void inputNumber (void)
+  {
+    cout<<"Enter an integer number: ";
+    cin>>num;
+  }
+  void displayNumber()
+  { 
+    cout<<"Num: "<<num<<endl;
+  }
 };
 int main()
 {
-  student s;
-ofstream file;
-file.open("aaa.txt",ios::out);
-  if(!file)
-  {
-cout<<"Error in creating file.."<<endl;
-     return 0;
-  }
-cout<<"\nFile created successfully."<<endl;
-s.getData();   
-file.write((char*)&s,sizeof(s));   
-file.close();  
-cout<<"\nFile saved and closed succesfully."<<endl;
-ifstream file1;
-  file1.open("aaa.txt",ios::in);
-  if(!file1){
-cout<<"Error in opening file..";
-      return 0;
-  }
-  file1.read((char*)&s,sizeof(s));
-s.showData();
-  file1.close();
+  Number N;
+  N.inputNumber();
+  N.displayNumber();
+  Number *ptrN;
+  ptrN = new Number; 
+  cout<<"Default value... "<<endl;
+  ptrN->displayNumber();
+  ptrN->inputNumber();
+  ptrN->displayNumber();
   return 0;
 }
-
-

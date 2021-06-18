@@ -1,38 +1,18 @@
 #include <iostream>
+using namespace std;
 
-#include <typeinfo>
-
-   using namespace std;
-
-   class Polymorphic {
-
-virtual void Member(){}
-
-};
-
-   int main ()
-
-   {
-
-       try
-
-       {
-
-           Polymorphic * pb = 0;
-
-           typeid(*pb);  
-
-       }
-
-       catch (exception& e)
-
-       {
-
-           cerr << "exception caught: " << e.what() << endl;
-
-       }
-
-       return 0;
-
-   }
-
+int main() {
+ 
+    int n,last_num,sum = 0,temp;
+    cin>>n;
+    temp = n;
+ 
+    while(temp > 0)
+    {
+        last_num = temp %10;
+        sum = sum + last_num;
+        temp = temp/10;
+    }
+    cout<<sum;
+    return 0;
+}

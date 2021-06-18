@@ -9,7 +9,8 @@
 			"algorithm": "c",
 			"random": "c",
 			"ostream": "cpp",
-			"iostream": "cpp"
+			"iostream": "cpp",
+			"stdlib.h": "c"
 		}
 	}
 }

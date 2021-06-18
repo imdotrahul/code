@@ -1,43 +1,36 @@
-#include <stdio.h>
-#include<math.h>
+#include<stdio.h>
+
 int main()
 {
-    int t,i,k,temp;
-	scanf("%d",&t);
-	int n[t],j,a=0;
-	int arr[1000];
-	for(i=0;i<t;i++)
-	{
-		scanf("%d",&n[i]);
-		
-	}
-	for(i=0;i<t;i++){
-	    j=n[i];
-		if(j<=1){
-			printf("1\n");
-		}
-		else{
-			arr[temp]=j*(j-1);
-			for(k=(j-2);k>0;k--)
-		    {
-		        arr[temp]=arr[temp]*k;
-		        
-		    }
-			while(arr[temp]!=0)
-			{
-				int remainder[]={'\0'};
-				remainder[a]=arr[temp]%10;
-				printf("%d",remainder[a]);
-				a=a+1;
-			}
+    int t,n,arr[1000],i,j,k;
+    scanf("%d",&t);
+	int p,q;
+    while(t--)
+    {
+	    scanf("%d",&n);
+        q=1;
+        arr[0]=1;
+        for(j=2;j<=n;j++)
+        {
+            p=0;
+            for(k=0;k<q;k++)
+            {
+                arr[k]=arr[k]*j+p;
+                p=arr[k]/10;
+                arr[k]=arr[k]%10;
+            }
+            while(p)
+            {
+	            arr[k]=p%10;
+                k++;
+                q++;
+                p=p/10;
+            }
+        }
+        for(i=q-1;i>=0;i--)
+            printf("%d",arr[i]);
 
-			
-		    	
-		}
-
-		
-	    
-	}
-	return 0;
-
+        printf("\n");
+    }
+    return 0;
 }

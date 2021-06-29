@@ -2,18 +2,15 @@ DECLARE
 a number;
 b number;
 c number;
-d number;
-e number;
 average float;
 summ number;
 BEGIN
-a:=10;
-b:=50;
-c:=70;
-d:=25;
-e:=33;
+a:=&a;
+b:=&b;
+c:=&c;
 
-summ:=(a+b+c+d+e);
+
+summ:=(a+b+c);
 average:=summ/5;
 dbms_output.Put_line(summ);
 dbms_output.Put_line(average);

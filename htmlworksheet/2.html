@@ -1,32 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <script>
+        function greet() {
+            let name = document.querySelector('name');
+            alert('Thank You for Your Support');
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+        }
+
+        .container {
+            width: 750px;
+            height: 500px;
+            border: 1px solid;
+            background-color: lightpink;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            justify-content: space-around;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .first-row {
+            display: flex;
+        }
+
+        .owner {
+            width: 100%;
+            margin-right: 40px;
+        }
+
+        .input-field {
+            border: 1px solid rgb(30, 13, 187);
+        }
+
+        .input-field input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+        }
+
+        .selection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selection select {
+            padding: 10px 20px;
+        }
+
+        a {
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        a:hover {
+            background-color: dodgerblue;
+        }
+
+        .cards img {
+            width: 100px;
+        }
+    </style>
+</head>
 
 <body>
-    <center>
-        <h1>
-            Hey! This is My Webpage.
-        </h1><br><br><br>
-        <h2>
-            My Name is Rahul Yadav.
-        </h2><br><br><br>
-        <h3>
-            I am pursuing my B.Tech degree from chandigarh university.
-        </h3><br><br><br>
-        <h4>
-            I have made this webpage by using html only.
-        </h4><br><br><br>
-        <h5>
-            i like to play volleyball.
-        </h5><br><br><br>
-        <h6>
-            below i have provided my description.
-        </h6><br><br><br>
-        <p>
-            hey! my name is rahul yadav,i am a student at chandigarh university.<br> currentlypursuing btech degree from
-            chandigarh university. i love to play volleyball.<br>
-            this is all about me.
-        </p>
-    </center>
+    <div class="container">
+        <h1>Confirm Your Payment</h1>
+        <div class="first-row">
+            <div class="owner">
+                <h3>Owner</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password">
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-field">
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Card Number</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                    <select name="years" id="years">
+                        <option value="2020">2024</option>
+                        <option value="2019">2023</option>
+                        <option value="2018">2022</option>
+                        <option value="2017">2021</option>
+                        <option value="2016">2020</option>
+                        <option value="2015">2019</option>
+                    </select>
+                </div>
+                <div class="cards">
+                    <img src="ka.png" alt="">
+                    <img src="kan.png" alt="">
+                    <img src="kanh.png" alt="">
+                </div>
+            </div>
+        </div>
+        <form onsubmit="greet();return false;">
+            <input id="name" type="submit">
+        </form>
+    </div>
 </body>
 
 </html>

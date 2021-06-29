@@ -1,37 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-<body style="text-align:left">
+<head>
+    <title>Payment Form</title>
+</head>
 
-    <form>
-        <br><br><br>
-        <label for="username">First Name: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="Firstname" id="Firstname"><br><br>
+<body bgcolour="Honey Dew" background="back1.jpeg">
+</body>>
+<center>
 
-        <label for="username">Last Name: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="lastname" id="lastname"><br><br>
+    <form action="2.html" method="GET">
 
-        <label for="username">E-Mail: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="email" id="email"><br><br>
+        <table bgcolor="lightgrey" background="transparent">
+            <h2><u><i>Payment Form</i></u></h2>
+            <tr>
+                <td style="font-size: 24px;"><i>FIRST NAME:</i></td>
+                <td style="font-size: 24px;"><input type="text" name="fname" placeholder="First Name"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>LAST NAME:</i></td>
+                <td style="font-size: 24px;"><input type="text" name="lname" placeholder="Last Name"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>DATE OF BIRTH:</i></td>
+                <td style="font-size: 24px;"><input type="date" name="date" min="01-04-1998" max="01-04-2020"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>EMAIL ID:</i></td>
+                <td style="font-size: 24px;"><input type="email" name="Email_ID"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>MOBILE NUMBER:<i></td>
+                <td style="font-size: 24px;"><input type="text" name="phone_no" placeholder="10 digits number"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>GENDER:</i></td>
+                <td style="font-size: 24px;"><input type="radio" name="gender" value="male">MALE
+                    <input type="radio" name="gender" value="Female">Female</td>
+            </tr>
 
-        <label for="birthday">Date of Birth:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="date" id="DoB" name="DoB"><br><br>
+            <tr>
+                <td style="font-size: 24px;"><i>ADDRESS:</i></td>
+                <td style="font-size: 24px;"><textarea cols="60" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;">CITY:</i></td>
+                <td style="font-size: 24px;"><input type="text" name="city"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>PIN CODE:</i></td>
+                <td style="font-size: 24px;"><input type="text" name="pin_code"></td>
+            </tr>
+            <tr>
+                <td style="font-size: 24px;"><i>STATE:</i></td>
+                <td style="font-size: 24px;"><select name="state">
+                        <option>Chandigarh</option>
+                        <option>Bihar</option>
+                        <option>Haryana</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Goa</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <tdstyle="font-size: 24px;"><i>COUNTRY</i></td>
+                    <td style="font-size: 24px;"><input type="text" name="country" value="India" readonly="readonly">
+                    </td>
+            </tr>
 
-        <label for="gender">Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="gender" id="male">
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="female">
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="other">
-        <label for="other">other</label><br><br>
+        </table><br>
+        <div>
+            <input type="submit" name="submit">
+            <input type="reset" name="reset">
+        </div>
 
-        <label for="upload">Upload Resume:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="file" name="upload" id="file-select"><br><br>
-
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
     </form>
+</center>
 
 </body>
 

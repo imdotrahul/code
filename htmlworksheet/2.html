@@ -5,10 +5,7 @@
 
     <meta charset="UTF-8">
     <title>Payment Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet">
+
     <script>
         function greet() {
             let name = document.querySelector('name');
@@ -111,7 +108,7 @@
             <div class="cvv">
                 <h3>CVV</h3>
                 <div class="input-field">
-                    <input type="password">
+                    <input type="password" maxlength="3">
                 </div>
             </div>
         </div>
@@ -119,12 +116,12 @@
             <div class="card-number">
                 <h3>Card Number</h3>
                 <div class="input-field">
-                    <input type="text">
+                    <input type="text" maxlength="12">
                 </div>
             </div>
         </div>
         <div class="third-row">
-            <h3>Card Number</h3>
+            <h3>Card Validity</h3>
             <div class="selection">
                 <div class="date">
                     <select name="months" id="months">

@@ -4,7 +4,7 @@
 <head>
     <style>
         .body {
-            background: lightpink;
+
             background-size: auto;
             background-size: cover;
             background-attachment: fixed;
@@ -26,7 +26,7 @@
             text-align: center;
             padding: auto;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 20px;
         }
 
         h1 {
@@ -100,14 +100,14 @@
             text-align: justify;
             font-size: 20px;
             border-radius: 10px;
-            height: 350px;
+            height: 550px;
         }
 
         #prog {
             background-color: lightblue;
             float: right;
             width: 30%;
-            height: 500px;
+            height: 600px;
             font-size: 20px;
             text-align: hidden;
             color: black;
@@ -125,16 +125,16 @@
     </style>
 </head>
 
-<body class="body">
+<body class="body" background="cu.jpeg">
     <div class="nav">
 
-        <a class="active" href="4.html">Home</a>
+        <a class="active" href="4.html">Home&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-        <a href="3.html">Contact</a>
+        <a href="3.html">Contact&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-        <a href="2.html">About</a>
+        <a href="2.html">About&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-        <a href="1.html">Log out</a>
+        <a href="1.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
     </div>
 
@@ -188,17 +188,80 @@
                 Notice: Results Out. Enter the details to get your result
 
                 <pre><div> First Name: <input type="text"></div>
-        
-        <div> Last Name: <input type="text"></div>
-        
-        <div> Gender: male <input type="radio" name="gender"> female <input type="radio" name="gender"> other <input type="radio" name="gender"></div>
-        
-        <div> Email-Id: <input type="email"></div>
-    
-        <div> section: <input type="text"></div>
-        
-        <div> uid: <input type="text"></div>
-        
+                    <div> Last Name: <input type="text"></div>
+                    <div> Gender: male <input type="radio" name="gender" required> female <input type="radio" name="gender"> other <input type="radio" name="gender"></div>
+                    <div> Email-Id: <input type="email"></div>
+                    <div>Section:<select id="section" name="section">
+                        <option value="0">select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select><br>
+                    <div>UID: <select id="uid" name="uid">
+                        <option value="0">select</option>
+                        <option value="1">uid 1</option>
+                        <option value="2">uid 2</option>
+                        <option value="3">uid 3</option>
+                        <option value="4">uid 4</option>
+                        <option value="5">uid 5</option>
+                        <option value="6">uid 6</option>
+                        <option value="7">uid 7</option>
+                        <option value="8">uid 8</option>
+                        <option value="9">uid 9</option>
+                    </select><br>
+                    <div>
+                    <button onclick="message()" style="align-self: auto;">submit</button>    <input type="reset" name="reset"></div>
+                    
+
+                    <SCRIPT>
+
+                        function between(x, min, max) {
+                          return x >= min && x <= max;
+                        }
+                        
+                        function message() {
+                        
+                        var s = document.getElementById('uid');
+                        
+                        if (s.value == 0) {
+                            alert("Please select an option!")
+                        }
+                        else if (between(s.value, 1, 1)) {
+                            alert("You have scored 80% marks.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 2, 2)) {
+                            alert("You have scored 70% marks.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 3, 3)) {
+                            alert("You have scored 10% marks. You are fail.Ask your parents to come to school.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 4, 4)) {
+                            alert("You have scored 74% marks.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 5, 5)) {
+                            alert("You have scored 96% marks.Excellent\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 6, 6)) {
+                            alert("You have scored 25% marks.You are fail.Ask your parents to come to school.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 7, 7)) {
+                            alert("You have scored 93% marks.very good. keep it up.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 8, 8)) {
+                            alert("You have scored 65% marks.Need to improve.\n Thank You\n visit again.")
+                        }
+                        else if (between(s.value, 9, 9)) {
+                            alert("You have scored 75% marks.\n Thank You\n visit again.")
+                        }
+                    }
+                        </SCRIPT>
+                </div>
         </pre>
 
             </div>

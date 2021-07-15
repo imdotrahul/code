@@ -34,7 +34,8 @@ if (isset($_POST['submit'])) {
                 $stmt = $conn->prepare($Insert);
                 $stmt->bind_param("sssss",$firstname, $lastname,  $email,  $phone, $password);
                 if ($stmt->execute()) {
-                    echo "New record inserted sucessfully.";
+                    
+                    header('location:songs.html');
                 }
                 else {
                     echo $stmt->error;

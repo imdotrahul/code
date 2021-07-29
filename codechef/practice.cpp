@@ -1,17 +1,43 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
 using namespace std;
-int main()
-{
-    long t,g,c;
-    cin>>t;
-    for(int i=0;i<t;i++)
-    {
-        long answer=0;
-        cin>>g>>c;
-        answer=(c*c)/(2*g);
-        cout<<answer<<endl;
 
+void rotatebyone(int arr[],int n)
+{
+    int temp=arr[0];
+    for(int i=0;i<n-1;i++)
+    {
+        arr[i]=arr[i+1];
     }
-    return 0;
+    arr[n-1]=temp;
+}
+void rotate(int arr[],int d,int n)
+{
+    for(int i=0;i<d;i++)
+    {
+        rotatebyone(arr,n);
+    }
+}
+void display(int arr[], int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+}
+
+int main() {
+    int t;
+    cin>>t;
+    int arr[100000],n,d;
+    for(int i=0;i<t;i++)
+    {       
+        cin>>n>>d;
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i];
+        }
+        rotate(arr,d,n);
+        display(arr,n);
+    }
 }

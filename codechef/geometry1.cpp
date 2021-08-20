@@ -3,6 +3,8 @@
 #include<string.h>
 #include<cstdlib>
 #include<stdio.h>
+#define m_pi 3.141592653589793238462643383279502884
+
 
 using namespace std;
 
@@ -25,16 +27,16 @@ int main()
     }
     for(int k=0;k<q;k++)
     {
-        int distance=0,dist=0,a=0,total=0;
-        float angle=0,cosine=0,radian=0,perp=0,area=0;
-        distance=v[i]*ti[i];
-        dist= sqrt(pow(x[1] - x[0], 2) + pow(y[0] - y[1], 2) * 1.0);
+        double distance=0,dist=0,a=0,total=0;
+        double angle=0,tangent=0,prep=0,area=0;
+        distance=v[k]*ti[k];
+        dist= sqrt(pow(x[1] - x[0], 2) + pow(y[0] - y[1], 2));
         a=dist/2;
         total=a+distance;
         angle=(360/n)/2;
-        radian = tan ( (angle * 3.14) / 180.0 );
-        perp = radian*total;
-        area=n*perp*total;
+        tangent= tan((angle*m_pi)/180);
+        prep = tangent*total;
+        area=n*prep*total;
         cout<<fixed;
         cout<<area<<endl;
    }

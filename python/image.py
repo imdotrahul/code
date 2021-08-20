@@ -1,10 +1,18 @@
-from deepface import DeepFace 
-from PIL import Image
-import cv2
-import matplotlib.pyplot as plt
-img_path = 'img4.jpg'
-img = cv2.imread(img_path) 
-plt.imshow(img[:, :, ::- 1])
-image = Image.open(img_path) 
-image.show()
-#print(img)
+for _ in range(int(input())):
+    a,b,c,d,e,f=map(int,input().split())
+    a1=a+b+c
+    a2=d+e+f
+    if(a>d):
+        print(1)
+    elif(a<d):
+        print(2)
+    else:
+        if(b>e):
+            print(1)
+        elif(b<2):
+            print(2)
+        else:
+            if(c>f):
+                print(1)
+            else:
+                print(2)

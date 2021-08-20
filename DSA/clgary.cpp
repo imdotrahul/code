@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string.h>
 using namespace std;
 int main()
 {
@@ -12,7 +11,7 @@ int main()
     }
     int numinserted,position;
     cin>>numinserted>>position;
-    n=n+1;
+    n++;
     for(int j=n-1;j>=position;j--)
     {
         arr[j]=arr[j-1];

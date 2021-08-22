@@ -4,22 +4,25 @@ int main()
 {
     int n;
     cin>>n;
-    int arr[n];
+    int arrr[n];
     for(int i=0;i<n;i++)
     {
-        cin>>arr[i];
+        cin>>arrr[i];
     }
     int numinserted,position;
     cin>>numinserted>>position;
     n++;
     for(int j=n-1;j>=position;j--)
     {
-        arr[j]=arr[j-1];
+        arrr[j]=arrr[j-1];
     }
-    arr[position-1]=numinserted;
+    arrr[position-1]=numinserted;
     for(int i=0;i<n;i++)
     {
-        cout<<arr[i]<<" ";
+        cout<<arrr[i]<<" ";
     }
+    // int n;
+    // cin >> n;
+    // cout << n;
 
 }

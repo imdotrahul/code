@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5214835026D15729000DBBE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5214834F26D15729000DBBE3 /* main.cpp */; };
+		5233216D26D61FF5004050D9 /* arraychck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5233216B26D61FF5004050D9 /* arraychck.cpp */; };
+		5233217026D6289E004050D9 /* arrswap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5233216E26D6289D004050D9 /* arrswap.cpp */; };
+		52CF9E9626DBF5B80089FD76 /* linkedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		5214834C26D15729000DBBE3 /* cppLearning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cppLearning; sourceTree = BUILT_PRODUCTS_DIR; };
 		5214834F26D15729000DBBE3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5233216B26D61FF5004050D9 /* arraychck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arraychck.cpp; sourceTree = "<group>"; };
+		5233216E26D6289D004050D9 /* arrswap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arrswap.cpp; sourceTree = "<group>"; };
+		5233216F26D6289E004050D9 /* arrswap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = arrswap.hpp; sourceTree = "<group>"; };
+		52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = linkedlist.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				5214834F26D15729000DBBE3 /* main.cpp */,
+				5233216B26D61FF5004050D9 /* arraychck.cpp */,
+				5233216E26D6289D004050D9 /* arrswap.cpp */,
+				5233216F26D6289E004050D9 /* arrswap.hpp */,
+				52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */,
 			);
 			path = cppLearning;
 			sourceTree = "<group>";
@@ -118,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5233216D26D61FF5004050D9 /* arraychck.cpp in Sources */,
 				5214835026D15729000DBBE3 /* main.cpp in Sources */,
+				52CF9E9626DBF5B80089FD76 /* linkedlist.cpp in Sources */,
+				5233217026D6289E004050D9 /* arrswap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

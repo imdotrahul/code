@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "type": "java",
+        "name": "Launch student",
+        "request": "launch",
+        "mainClass": "student",
+        "projectName": "code_73f2dff9"
+      },
+      {
         "name": "clang++ - Build and debug active file",
         "type": "cppdbg",
         "request": "launch",

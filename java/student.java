@@ -1,3 +1,4 @@
+
 public class student {
     public int a,b,uid;
     student()

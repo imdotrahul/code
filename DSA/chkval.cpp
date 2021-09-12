@@ -9,13 +9,8 @@ int main()
     {
         cin>>arr[i];
     }
-    int chkval;
-    cin>>chkval;
-    for(int j=1;j<=n;j++)
+    for(int i=1;i<=n;i++)
     {
-        if(arr[j]==chkval)
-        {
-            cout<<j;
-        }
+        cout<<arr[i]<<" ";
     }
 }

@@ -1,66 +1,39 @@
-#include<iostream>
-#include<vector>
-#include<math.h>
-#include<string.h>
-#include<algorithm>
-
+#include <iostream>
 using namespace std;
-typedef long long int ll;
-int main() 
+
+int main()
 {
- int t;
- cin>>t;
- while(t--)
- {
-   int n;
-   cin>>n;
-   vector<pair<ll,ll> > v{n,{0,0}} ;
-   int a[n],t[n];
-   for(int i=0;i<n;i++) cin>>a[i];
-   for(int i=0;i<n;i++) cin>>t[i];
-   for(int i=0;i<n;i++) {
-       if(t[i]>=a[i])
-       v[i]={a[i],t[i]};
-       //else v[i]={0,0};
-   }
-   if(v.size()==0) {
-       cout<<0<<endl;
-       continue;
-   }
-   sort(v.begin(),v.end());
-   auto maxtime=*max_element(v.begin(),v.end());
-   //cout<<maxtime.second<<v[2].first<<endl;
-   ll curtime=0,z=0,temp=0;
-    vector<int> p;
-    for(int i=0;i<n;i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
-       if(v[i].first==0) continue;
-       if(temp<maxtime.second)
-       {
-           temp+=v[i].first;
-           z++;
-       }
-    }
-    cout<<z<<endl;
-    //q[0]=0;
-   for(int i=0;i<v.size();i++)
-   {
-       if(v[i].first==0) continue;
-       //cout<<v[i].first<<" "<<v[i].second<<endl;
-       if(curtime<maxtime.second)
-       {
-         auto itr=find(a,a+n,v[i].first);
-         if(itr!=a+n)
-         {
-            // if(curtime+v[i].first<maxtime.second){
-           cout<<(distance(a,itr)+1)<<" "<<curtime<<" ";
-           curtime+=v[i].first;
-           cout<<curtime<<endl;
-         }
+        int N;
+        cin >> N;
+        int a[N], even = 0, odd = 0, sum = 0;
+        for (int i = 1; i <= N; i++)
+        {
+            cin >> a[i];
         }
+        for (int i = 1; i <= N; i++)
+        {
+            if (a[i] % 2 == 0)
+            {
+                even++;
+            }
+            else
+            {
+                odd++;
+            }
+        }
+        int min;
+        min = even <= odd ? even : odd;
+
+        sum += 2 * min;
+        int res = ((N - sum) / 2) + sum;
+        if (N % 2 != 0)
+            res++;
+        cout << endl;
+        cout << res << "sum\n";
     }
-   
- }
- 
- return 0;
+    return 0;
 }

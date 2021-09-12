@@ -1,13 +1,13 @@
+////
+////  arrswap.hpp
+////  cppLearning
+////
+////  Created by Rahul Yadav on 25/08/21.
+////
 //
-//  arrswap.hpp
-//  cppLearning
+//#ifndef arrswap_hpp
+//#define arrswap_hpp
 //
-//  Created by Rahul Yadav on 25/08/21.
+//#include <stdio.h>
 //
-
-#ifndef arrswap_hpp
-#define arrswap_hpp
-
-#include <stdio.h>
-
-#endif /* arrswap_hpp */
+//#endif /* arrswap_hpp */

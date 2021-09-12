@@ -10,6 +10,7 @@
 		5214835026D15729000DBBE3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5214834F26D15729000DBBE3 /* main.cpp */; };
 		5233216D26D61FF5004050D9 /* arraychck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5233216B26D61FF5004050D9 /* arraychck.cpp */; };
 		5233217026D6289E004050D9 /* arrswap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5233216E26D6289D004050D9 /* arrswap.cpp */; };
+		5239707826E9CF32004ECCCF /* covaxin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239707726E9CF32004ECCCF /* covaxin.cpp */; };
 		52CF9E9626DBF5B80089FD76 /* linkedlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5233216B26D61FF5004050D9 /* arraychck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arraychck.cpp; sourceTree = "<group>"; };
 		5233216E26D6289D004050D9 /* arrswap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arrswap.cpp; sourceTree = "<group>"; };
 		5233216F26D6289E004050D9 /* arrswap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = arrswap.hpp; sourceTree = "<group>"; };
+		5239707726E9CF32004ECCCF /* covaxin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = covaxin.cpp; sourceTree = "<group>"; };
 		52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = linkedlist.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				5233216E26D6289D004050D9 /* arrswap.cpp */,
 				5233216F26D6289E004050D9 /* arrswap.hpp */,
 				52CF9E9526DBF5B80089FD76 /* linkedlist.cpp */,
+				5239707726E9CF32004ECCCF /* covaxin.cpp */,
 			);
 			path = cppLearning;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				5233216D26D61FF5004050D9 /* arraychck.cpp in Sources */,
 				5214835026D15729000DBBE3 /* main.cpp in Sources */,
+				5239707826E9CF32004ECCCF /* covaxin.cpp in Sources */,
 				52CF9E9626DBF5B80089FD76 /* linkedlist.cpp in Sources */,
 				5233217026D6289E004050D9 /* arrswap.cpp in Sources */,
 			);

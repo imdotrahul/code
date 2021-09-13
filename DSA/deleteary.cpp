@@ -2,23 +2,22 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-    int position;
-    cin>>position;
-    --position;
-    for(int j=position;j<n-1;j++)
-    {
-        arr[j]=arr[j+1];
-    }
-    for(int i=0; i<n-1; i++)
-    {
-        cout << arr[i] << "  "; 
-    }
-
+	int arr[10];
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> arr[i];
+	}
+	int position;
+	cout << "Enter the position to delete in the array: ";
+	cin >> position;
+	--position;
+	for (int i = position; i < 10; i++)
+	{
+		arr[i] = arr[i + 1];
+	}
+	cout << " The resultant array after deletion is: ";
+	for (int i = 0; i < 9; i++)
+	{
+		cout << arr[i]<<" ";
+	}
 }

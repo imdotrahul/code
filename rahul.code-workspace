@@ -10,7 +10,8 @@
 			"random": "c",
 			"ostream": "cpp",
 			"iostream": "cpp",
-			"stdlib.h": "c"
+			"stdlib.h": "c",
+			"xutility": "cpp"
 		}
 	}
 }

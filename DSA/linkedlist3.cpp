@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 class node
@@ -30,55 +31,46 @@ node* createNode(int data, node *head) //node creation
 void display(node* head)  
 {
     node* ptr=head;
+    cout<<" The elements in the linked list are \n";
     while(ptr !=NULL)
     {
-        cout<<ptr->data<<" | "<<ptr->next<<"-->";
+        cout<<ptr->data<<"  ";
         ptr=ptr->next;
     } 
+    cout<<"\n";
 
 }
-node* insertnode(node*head,int number)   // insertion at beginning
+int  checknumber(node*head,int number)    //check the count of the number
 {
-    node* p = new node();
-    p->data=number;
-    p->next = head;
-    head = p;
-    return head;
-    
-}
-
-node* deletenode(node*head, int position)
-{
-    node*ptr=head;
-    int n=position-1;
-    while(n>0)
+    int a=0;
+    node* ptr=head;
+    while(ptr!=NULL)
     {
+        if(ptr->data==number)
+        {
+            a++;
+        }
         ptr=ptr->next;
     }
-    ptr=
+    return a;
 }
-
 int main()
 {
     int n;
-    cout<<"Enter the number of nodes: ";
+    cout << "Enter the no of nodes: ";
     cin >> n;
-
     node* head = NULL;
-    while (n--)
-    {
+    while(n--) {
         int data;
-        cout<<"Enter the data to be entered: ";
+        cout << "Enter data for node: ";
         cin >> data;
-        head = createNode(data, head);
+        head=createNode(data, head);
     }
     display(head);
-    int x;
-    cout<<"enter the data to add in the number: ";
-    cin>>n;
-    head = insertnode(head,x);
-    display(head);
-
-    
-
+    int number;
+    cout<<"Enter the number to be counted: ";
+    cin>>number;
+    int count;
+    count =  checknumber(head,number); 
+    cout<<count;
 }

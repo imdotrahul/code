@@ -30,34 +30,25 @@ node* createNode(int data, node *head) //node creation
 void display(node* head)  
 {
     node* ptr=head;
+        cout<<" The elements in the linked list are \n";
+
     while(ptr !=NULL)
     {
-        cout<<ptr->data<<" | "<<ptr->next<<"-->";
-        ptr=ptr->next;
-    } 
-
-}
-node* insertnode(node*head,int number)   // insertion at beginning
-{
-    node* p = new node();
-    p->data=number;
-    p->next = head;
-    head = p;
-    return head;
-    
-}
-
-node* deletenode(node*head, int position)
-{
-    node*ptr=head;
-    int n=position-1;
-    while(n>0)
-    {
+        cout<<ptr->data<<"  ";
         ptr=ptr->next;
     }
-    ptr=
-}
+    cout<<"\n"; 
 
+}
+void multiply(node*head,int x)  // code to multiply the linked list by a number
+{
+    node*ptr=head;
+    while(ptr!=NULL)
+    {
+        ptr->data=ptr->data*x;
+        ptr=ptr->next;
+    }
+}
 int main()
 {
     int n;
@@ -74,11 +65,8 @@ int main()
     }
     display(head);
     int x;
-    cout<<"enter the data to add in the number: ";
-    cin>>n;
-    head = insertnode(head,x);
+    cout<<"enter the number by which want to multiply: ";
+    cin>>x;
+    multiply(head,x);
     display(head);
-
-    
-
 }

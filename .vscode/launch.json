@@ -6,6 +6,13 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch Inheritence",
+        "request": "launch",
+        "mainClass": "Inheritence",
+        "projectName": "code_ff635f1e"
+      },
+      {
+        "type": "java",
         "name": "Launch student",
         "request": "launch",
         "mainClass": "student",

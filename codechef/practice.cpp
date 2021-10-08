@@ -1,10 +1,29 @@
 #include<iostream>
-#include<math.h>
-
 using namespace std;
 
 int main()
 {
-  int n = 7;
-  cout << n/2;
+  int n;
+  cin>>n;
+  int arr[n],even=0,odd =0;
+  for(int i=0;i<n;i++)
+  {
+    cin>>arr[i];
+    if(arr[i]%2==0)
+    {
+      even++;
+    }
+    else{
+      odd++;
+    }
+    
+  }
+  if(even>odd)
+  {
+    cout<<"READY FOR BATTLE";
+  }
+  else if(even<odd||even==odd)
+  {
+      cout<<"NOT READY";
+  }
 }

@@ -41,7 +41,12 @@ int dequeue(Queue* queue)
     int item = queue->array[queue->front];
     queue->front = (queue->front + 1)
                    % queue->capacity;
-    queue->size = queue->size - 1;
+
+    
+    queue->rear = (queue->rear - 1)
+                   % queue->capacity;
+    queue->size = queue->size - 2;
+
     return item;
 }
 int front(Queue* queue)
@@ -64,9 +69,12 @@ int main()
     enqueue(queue, 20);
     enqueue(queue, 30);
     enqueue(queue, 40);
- 
-    cout << dequeue(queue)
-         << " dequeued from queue\n";
+    dequeue(queue);
+
+    cout<<"---------------------------\n";
+    cout<<"After deque from both the ends: \n";
+    cout<<"---------------------------\n";
+
  
     cout << "Front item is "
          << front(queue) << endl;

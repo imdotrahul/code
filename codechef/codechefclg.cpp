@@ -6,9 +6,19 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a, b,sum=0;
-        cin>>a>>b;
-        sum=a+b;
-        cout<<sum<<endl;
+        int a,b,c;
+        cin>>a>>b>>c;
+        if(a>b&&b>c)
+        {
+            cout<<b<<endl;
+        }
+        else if(a>b&&b<c)
+        {
+            cout<<b<<endl;
+        }
+        if(a>>b&&b>c)
+        {
+            cout<<b<<endl;
+        }
     }
 }

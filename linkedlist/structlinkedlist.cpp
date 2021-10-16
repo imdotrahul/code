@@ -76,24 +76,23 @@ node* deleteitem(node*head,int data,int loc)   //delete at a location
     ptr->next=temp;
     return head;
 }
-node* reverse(node*p)  //reverse a link list
+void reverse(node*p)  //reverse a link list
 {
     if(p->next==NULL);
     {
         head=p;
-        return p; 
+        return; 
     }
     reverse(p->next);
     node* ptr=head;
     while(ptr->next!=NULL)
     {
         ptr=ptr->next;
-    }
-    ptr->next=NULL;
+        cout<<ptr->data<<" | "<<ptr->next<<"-->";
 
-    ptr=p;
-    return head;
-    
+    }
+    p->next=NULL;
+    ptr->next=p;    
 }
 
 void display(node* head)  //display link list
@@ -121,10 +120,6 @@ int main ()
         head = createnode(head, data);
     }
     display(head);
-     node* revers=NULL;
-     revers=reverse(head);
-
-     display(revers);
-    
+    reverse(head);    
 
 }

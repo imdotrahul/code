@@ -14,7 +14,7 @@ int main()
     cin>>t;
     while(t--)
     {
-        ll n, k, ans1 = 0, ans2 = 0, d2, d1;
+        ll n, ans1 = 0, ans2 = 0, d2, d1;
         ll m = INT_MAX;
 
         cin >> n;

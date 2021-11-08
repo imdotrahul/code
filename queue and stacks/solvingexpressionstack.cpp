@@ -106,6 +106,7 @@ int evaluate(string x)
 }
 int main()
 {
-    cout<<evaluate("10 + 2 * 6")<<"\n";
+    int x=16,y=4,z=1;
+    cout<<evaluate("((x-y)*z) / (x-(y/z)) ")<<"\n";
     return 0;
 }

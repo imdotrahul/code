@@ -1,33 +1,46 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main ()
+int main()
 {
-    int t;
-    cin>>t;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    long long t;
+    cin >> t;
     while (t--)
     {
-        int n,c,k;
-        cin>>n>>c>>k;
-        int arr[n];
-        for(int i=0;i<n;i++)
+        long long s, i, c, k;
+
+        cin >> s >> c >> k;
+
+        long long array[s];
+
+        for (i = 0; i < s; i++)
+            cin >> array[i];
+
+        long long count = 0, sum = 0, ans = 0, j;
+
+        for (i = 0; i < s; i++)
         {
-            cin>>arr[i];
-        }
-        int sum=0,count =0,ans=0;
-        for(int i=0;i<n-1;i++)
-        {
-            for (int j = i; j < n-1; j++)
+            count = 0;
+            sum = 0;
+            for (j = i; j < s; j++)
             {
-                sum= sum+arr[i];
+                sum = sum + array[j];
                 count++;
-                if(sum>=k&&sum<c)
+                if (sum > c)
                 {
+                    sum = sum - array[j];
+                    count--;
                     break;
                 }
             }
-            ans=max(ans,count);
+            if (sum < k)
+            {
+                count = 0;
+            }
+            ans = max(count, ans);
         }
-        cout<<ans<<"\n";
+        cout << ans << endl;
     }
 }

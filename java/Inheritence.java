@@ -15,7 +15,7 @@ class Wheel extends Interior
 {
     void whil()
     {
-        System.out.println("heel type: low profile");
+        System.out.println("wheel type: low profile");
     }
 }
 class carname extends Wheel

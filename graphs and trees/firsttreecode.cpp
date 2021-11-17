@@ -6,24 +6,64 @@ struct Node{
     Node* right;
     Node* left;
 };
-Node* createnode(int data, Node* root)
+Node* createnode(Node* root,int data)
 {
     Node* n= new Node();
-    n->data=data;
+    n->data = data;
     n->left=NULL;
     n->right=NULL;
-    if(root=NULL)
+    if(root==NULL)
     {
         root=n;
     }
     else{
-        Node *ptr = root;
-        if(root->data<data)
+        Node*ptr= root;
+        if(ptr->data>data && ptr->left==NULL)
         {
-            while(ptr)
+            ptr->left=n;
         }
+        else if(ptr->data>data && ptr->left!=NULL)
+        {
+            createnode(ptr->left,data);
+        }
+        else if(ptr->data<data && ptr->right==NULL)
+        {
+            ptr->left=n;
+        }
+        else if(ptr->data>data && ptr->left!=NULL)
+        {
+            createnode(ptr->right,data);
+        }
+
     }
-    return n;
+    
+    
+    return root;
+}
+void printPostorder(struct Node* node)
+{
+    if (node == NULL)
+        return;
+ 
+    printPostorder(node->left);
+    printPostorder(node->right);
+    cout << node->data << " ";
+}
+void printInorder(struct Node* node)
+{
+    if (node == NULL)
+        return;
+    printInorder(node->left);
+    cout << node->data << " ";
+    printInorder(node->right);
+}
+void printPreorder(struct Node* node)
+{
+    if (node == NULL)
+        return;
+    cout << node->data << " ";
+    printPreorder(node->left);
+    printPreorder(node->right);
 }
 
 int main()
@@ -37,7 +77,14 @@ int main()
         int data;
         cout<<"Enter data of the node: ";
         cin>>data;
-        root=createnode(data,root);
+        root=createnode(root,data);
     }
-    cout<<root->data<<root->left<<root->right;
+    cout << "\nPreorder traversal of binary tree is \n";
+    printPreorder(root);
+ 
+    cout << "\nInorder traversal of binary tree is \n";
+    printInorder(root);
+ 
+    cout << "\nPostorder traversal of binary tree is \n";
+    printPostorder(root);
 }

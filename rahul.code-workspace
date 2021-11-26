@@ -13,7 +13,8 @@
 			"stdlib.h": "c",
 			"xutility": "cpp",
 			"ios": "cpp",
-			"vector": "cpp"
+			"vector": "cpp",
+			"iosfwd": "cpp"
 		}
 	}
 }

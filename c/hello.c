@@ -1,27 +1,11 @@
 #include<stdio.h>
 int main()
-{
-    int n,q;
-    scanf("%d %d",&n,&q);
-    long long arr[n];
-    for(int i=0;i<n;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    while(q--)
-    {
-        int l=0,r=0,x=0;
-        scanf("%d %d %d",&l,&r,&x);
-        int count = 0;
-        for(int i=l-1;i<=r-1;i=i+1)
-        {
-            if(arr[i]>=x)
-            {
-                count++;
-            }
+{    
+    printf("Welcome to Chandigarh University !!\n");
+    printf("\t My first C Program\n");   
 
-        }
-        printf("%d\n",count);
-    }
-    
+    printf("My name is Rohan\t I am from Punjab\n");   
+
+    printf("\t\t Coding is fun\n");   
+
 }

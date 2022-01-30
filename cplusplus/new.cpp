@@ -15,5 +15,10 @@ int main ()
     cout<<a<<"\n";
     int result = multiply(5,8);
     cout<<result<<"\n";
+
+    for(int i=0;i<10;i+=i+1)
+    {
+        cout<<"Rahul"<<"\n";
+    }
     
 }

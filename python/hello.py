@@ -1,13 +1,4 @@
-import nltk
-from textblob import TextBlob
-from textblob import Word
-text = input("enter the text to analyse\n")
-obj = TextBlob(text)
-sentiment, subjectivity=obj,sentiment
-print(obj.sentiment)
-if sentiment==0:
-  print('text is neutral')
-elif sentiment>0:
-   print('text is positive')
-else:
-  print('text is negative')
+ 
+ list1 = [1,2,"hi",4.5,"hemlo himanshu bhaiya"]
+
+ print(list1[0:4])

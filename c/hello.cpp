@@ -1,18 +1,18 @@
-#include<stdio.h>
-int main()
-{    
-    int n;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        scanf("%d ",&arr[i]);
-    }
-    int ans=0;
-    for(int i=0;i<n;i++)
-    {
-        ans=ans^arr[i];
-        printf("%d",ans);
-    }
+#include<iostream>
+using namespace std;
 
+int main()
+{
+    int x;
+    cin>>x;
+    cout<<x<<endl;
+
+    int z = 10;
+    cout<<z;
+
+    int y = x+z;
+    int g = 3;
+     g += x;
+     cout<<y<<" "<<g;
+    
 }

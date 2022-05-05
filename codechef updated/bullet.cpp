@@ -1,8 +1,9 @@
 #include<iostream>
 #include<math.h>
+#define main m
 using namespace std;
 
-int main()
+int m()
 {
     int t;
     cin>> t;

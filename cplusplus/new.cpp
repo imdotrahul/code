@@ -1,24 +1,20 @@
 #include<iostream>
-
+#include<string>
 using namespace std;
 
-int multiply(int a,int b)  
+int main()
 {
-    int c=a*b;
-    return c;
-}  
-
-int main ()
-{
-    int a;
-    cin >> a;
-    cout<<a<<"\n";
-    int result = multiply(5,8);
-    cout<<result<<"\n";
-
-    for(int i=0;i<10;i+=i+1)
+    string s;
+    cin>>s;
+    int n;
+    n = s.size();
+    int z = n-2;
+    if(n>10)
     {
-        cout<<"Rahul"<<"\n";
+        cout<<s[0]<<z<<s[n-1]<<endl;
     }
-    
+    else{
+        cout<<s<<endl;
+    }
+
 }

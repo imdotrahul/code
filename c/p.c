@@ -2,10 +2,8 @@
 
 int main() {
 
-    char arr[15] = "pointer array";
-    int ptr = arr;
-    printf("%c", ptr[1]);
-
-return 0;
-
+    char x= '9';
+    int y = x;
+    char z = 'b';
+    printf("%c\n",y);
 }

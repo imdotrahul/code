@@ -1,20 +1,24 @@
 #include<iostream>
-#include<string>
 using namespace std;
 
 int main()
 {
-    string s;
-    cin>>s;
-    int n;
-    n = s.size();
-    int z = n-2;
-    if(n>10)
+    int testcase;
+    cin>>testcase;
+    while(testcase--)
     {
-        cout<<s[0]<<z<<s[n-1]<<endl;
+        int n;
+        cin>>n;
+        int arr[n];
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+            if(arr[i]>=1000);
+            {
+                count++;
+            }
+        }
+        cout<<count<<"\n";
     }
-    else{
-        cout<<s<<endl;
-    }
-
 }

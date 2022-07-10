@@ -2,7 +2,9 @@
 
 int main()
 {
+    
     int t,n,arr[1000],i,j,k;
+
     scanf("%d",&t);
 	int p,q;
     while(t--)

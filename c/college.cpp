@@ -5,12 +5,10 @@ class Number
   private:
   int num;
   public:
-                            
   Number()
   {
      num=0;
   };
-                              
   void inputNumber (void)
   {
     cout<<"Enter an integer number: ";

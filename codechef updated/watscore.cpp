@@ -21,7 +21,7 @@ int main()
         {
             ll p,s;
             cin>>p>>s;
-            v.push_back([p,s]);
+            v.push_back({p,s});
         }
         sort(v.begin(),v.end());
         for (ll i = 0; i < v.size()-1; i++)

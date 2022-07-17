@@ -1,44 +1,41 @@
 #include<iostream>
 using namespace std;
 
-int x = 0;
-int checkposition(int arr[], int a, int b, int x)
+int binarysearch(int arr[],int size,int key)
 {
+    int start = 0;
+    int end  = size -1;
+    int mid  =(start+end)/2;
 
-    if (b >= 1)
+    while(start<=end)
     {
-        int m = a + (b - 1) / 2;
-        if (arr[m] == x)
+        if(arr[mid]==key)
         {
-            m = x;
-            return m;
+            return mid;
         }
-        if (arr[m] < x)
+        if(arr[mid]>key)
         {
-            x++;
-            return checkposition(arr, m + 1, b, x);
+            end = mid - 1;
         }
-        if (arr[m] > x)
+        else
         {
-            x++;
-            return checkposition(arr, 0, m - 1, x);
+            start = mid+1;
         }
-
+        mid = (start+end)/2;
     }
-    return 1;
+    return -1;
 
 }
+
 int main()
 {
-    int n;
-    cin >> n;
-    int* arr=new int[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    int checknumber;
-    cin >> checknumber;
-    int result = checkposition(arr, 0, n - 1, checknumber);
-    cout << result;
+    int index;
+    int arr1[7] = {1,2,3,4,5,6,7};
+    int arr2[6] ={4,5,6,7,8,9};
+
+    index = binarysearch(arr1,7,5);
+    cout<<index<<"\n";
+    index = binarysearch(arr2,6,4);
+    cout<<index<<"\n";
+
 }

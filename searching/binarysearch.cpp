@@ -5,7 +5,7 @@ int binarysearch(int arr[],int size,int key)
 {
     int start = 0;
     int end  = size -1;
-    int mid  =(start+end)/2;
+    int mid  =(start+end)/2; // if the value is too long of start and end then transform this formula as (start+(end-start)/2)
 
     while(start<=end)
     {

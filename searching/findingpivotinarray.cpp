@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// we consider pivot as the least element in the array
 int findpivot(int arr[],int n)
 {
     int start =0;

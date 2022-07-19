@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> //finding peak element index
 #include<vector>
 using namespace std;
 

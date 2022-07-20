@@ -51,20 +51,15 @@ double tillprecision(int n,int withoutprecision,int tillprecision) // after prec
 
 int main()
 {
-    int t;
-    cin>> t;
-    while(t--)
-    {
-        int n;
-        cin >> n;
-        int withoutprecision = findsqrt(n);
-        cout << withoutprecision<<"\n";
-        
-        int giveprecisionvalue;
-        cin>>giveprecisionvalue;
+    int n;
+    cin >> n;
+    int withoutprecision = findsqrt(n);
+    cout << withoutprecision<<"\n";
+    
+    int giveprecisionvalue;
+    cin>>giveprecisionvalue;
 
-        double afterprecision = tillprecision(n,withoutprecision,giveprecisionvalue);
-        cout<< afterprecision<<"\n";
-    }
+    double afterprecision = tillprecision(n,withoutprecision,giveprecisionvalue);
+    cout<< afterprecision<<"\n";
 
 }

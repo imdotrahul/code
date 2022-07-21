@@ -43,7 +43,7 @@ int allocatebooks(int arr[],int n,int m)
         if(ispossible(arr,n,m,mid))
         {
             ans = mid;
-            e = mid -1;
+            e = mid -1;  
         }
         else {
             s = mid +1;

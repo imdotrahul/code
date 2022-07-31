@@ -11,7 +11,7 @@ int main()
         cin>>a>>b>>c>>d;
         if(d/b>=c)
         {
-            cout<<"0"<<c<<"\n";
+            cout<<"0"<<" "<<c<<"\n";
         }
         else if(d/a<c)
         {

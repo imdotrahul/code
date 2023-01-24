@@ -18,7 +18,7 @@ Node* createnode(Node* root,int data)
     }
     else{
         Node*ptr= root;
-        if(ptr->data>data && ptr->left==NULL)
+        if(ptr->data > data && ptr->left==NULL)
         {
             ptr->left=n;
         }

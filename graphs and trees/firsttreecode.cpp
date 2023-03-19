@@ -17,7 +17,7 @@ Node* createnode(Node* root,int data)
         root=n;
     }
     else{
-        Node*ptr= root;
+        Node *ptr = root;
         if(ptr->data > data && ptr->left==NULL)
         {
             ptr->left=n;
@@ -34,11 +34,10 @@ Node* createnode(Node* root,int data)
         {
             createnode(ptr->right,data);
         }
-
     }
     
     
-    return root;
+    return initial;
 }
 void printPostorder(struct Node* node)
 {

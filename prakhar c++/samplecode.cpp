@@ -160,26 +160,23 @@ void GetDim(int& row, int& col){
 //*********************
 
 void PrintBox(int rows, int cols) {
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            if (i == 1 && j % 2 == 0) {
-                cout << "X";
-            } else if ((i+j) % 2 == i % 2) {
-                if (i % 2 == 0) {
-                    cout << "X";
-                } else {
-                    cout << "O";
-                }
-            } else {
-                if (i % 2 == 0) {
-                    cout << "O";
-                } else {
-                    cout << "X";
-                }
+    int rowcolumnsum = 0;
+    for(int i = 1;i<=rows;i++)
+    {
+        for(int j = 1;j<=cols;j++)
+        {
+            rowcolumnsum = i+j;
+            if(rowcolumnsum%2==0)
+            {
+                cout<<"X";
             }
-        }
-        cout << endl;
+            else{
+                cout<<"0";
+            }
+        }cout << endl;
     }
+        
+    
 }
 
 // Convert digit to its character equivalent

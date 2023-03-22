@@ -21,6 +21,7 @@ Node* createnode(Node* root,int data)
         if(ptr->data > data && ptr->left==NULL)
         {
             ptr->left=n;
+            
         }
         else if(ptr->data>data && ptr->left!=NULL)
         {
@@ -29,6 +30,7 @@ Node* createnode(Node* root,int data)
         else if(ptr->data<data && ptr->right==NULL)
         {
             ptr->left=n;
+            
         }
         else if(ptr->data>data && ptr->left!=NULL)
         {
@@ -37,7 +39,11 @@ Node* createnode(Node* root,int data)
     }
     
     
-    return initial;
+    return root;
+}
+void printtree(Node*root)
+{
+
 }
 void printPostorder(struct Node* node)
 {
@@ -71,12 +77,13 @@ int main()
     int numberofnodes;
     cout<<"Enter the number of nodes: ";
     cin>>numberofnodes;
+    node*head = root;
     while(numberofnodes--)
     {
         int data;
         cout<<"Enter data of the node: ";
         cin>>data;
-        root=createnode(root,data);
+        head=createnode(head,data);
     }
     cout << "\nPreorder traversal of binary tree is \n";
     printPreorder(root);

@@ -22,6 +22,8 @@ bool ispossible(int arr[],int n,int m,int mid)//find if the mid is a possible ou
         }
 
     }
+
+    
     return true;
 }
 

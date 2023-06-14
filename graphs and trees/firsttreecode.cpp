@@ -6,17 +6,19 @@ struct Node{
     Node* right;
     Node* left;
 };
+Node*root1;
+
 Node* createnode(Node* root, int data)
 {
     Node* n= new Node();
     n->data = data;
     n->left=NULL;
     n->right=NULL;
-    Node*root1;
     if(root==NULL)
     {
-        root=n;
-        root1 = root;
+        root1 = n;
+        
+        
     }
     else{
         Node *ptr = root;

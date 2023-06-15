@@ -17,11 +17,11 @@ Node* createnode(Node* root, int data)
     if(root==NULL)
     {
         root1 = n;
-        
-        
+        root = n;
+
     }
     else{
-        Node *ptr = root;
+        Node *ptr = root1;
         if(ptr->data < data && ptr->left==NULL)
         {
             ptr->left=n;
@@ -33,7 +33,7 @@ Node* createnode(Node* root, int data)
         }
         else if(ptr->data>data && ptr->right==NULL)
         {
-            ptr->left=n;
+            ptr->right=n;
             
         }
         else if(ptr->data>data && ptr->left!=NULL)

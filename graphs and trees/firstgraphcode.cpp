@@ -24,8 +24,9 @@ int print_MST(int parent[], int cost[V][V])
 		cout<<parent[i]<<" - "<<i<<" \t"<<cost[i][parent[i]]<<" \n";  
 		minCost+=cost[i][parent[i]];
     }
-	cout<<"Total cost is"<<minCost;
+	cout<<"Total cost is "<<minCost;
 }  
+
 
 void find_MST(int cost[V][V])  
 {  

@@ -7,6 +7,7 @@ void  multiply(int a,int b)
 {
     int x = a*b;
     cout <<x;
+    cout<<"my name";
     
 }
 

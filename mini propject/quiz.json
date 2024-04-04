@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "question": "What is the primary goal of data visualization?",
+            "options": ["To confuse viewers", "To make data easier to understand", "To hide information", "To make data more complex"],
+            "answer": 1
+        },
+        {
+            "question": "Which type of chart is best suited for showing trends over time?",
+            "options": ["Pie chart", "Bar chart", "Line chart", "Scatter plot"],
+            "answer": 2
+        },
+        {
+            "question": "What does a histogram represent?",
+            "options": ["Distribution of categorical data", "Distribution of continuous data", "Relationship between two variables", "Geographical data"],
+            "answer": 1
+        },
+        {
+            "question": "Which color scheme is typically used to represent categorical data?",
+            "options": ["Sequential", "Diverging", "Categorical", "Quantitative"],
+            "answer": 2
+        },
+        {
+            "question": "What is the purpose of a scatter plot?",
+            "options": ["Showing distribution of data", "Showing trends over time", "Displaying relationships between two variables", "Displaying hierarchical data"],
+            "answer": 2
+        },
+        {
+            "question": "What type of data is best represented using a bar chart?",
+            "options": ["Categorical", "Continuous", "Hierarchical", "Temporal"],
+            "answer": 0
+        },
+        {
+            "question": "What is the primary function of a heatmap?",
+            "options": ["Displaying geographical data", "Showing hierarchical relationships", "Visualizing correlations in data", "Representing time series data"],
+            "answer": 2
+        },
+        {
+            "question": "What does the size of a bubble in a bubble chart represent?",
+            "options": ["Frequency", "Category", "Magnitude", "Color"],
+            "answer": 2
+        },
+        {
+            "question": "What is the purpose of data labels in a chart?",
+            "options": ["Adding decoration", "Providing data values", "Changing chart color", "Animating the chart"],
+            "answer": 1
+        },
+        {
+            "question": "Which type of chart is best suited for comparing parts of a whole?",
+            "options": ["Line chart", "Scatter plot", "Pie chart", "Histogram"],
+            "answer": 2
+        }
+    ]
+}

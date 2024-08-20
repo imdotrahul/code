@@ -1,57 +1,58 @@
-#include <iostream>
+#include<iostream>
+#include<algorithm>
 #include <vector>
-#include <cmath>
-
 using namespace std;
+#define int long long
+const int mod=1e9+7;
 
-using ll = long long;
-
-void solve() {
-    int l, r;
-    cin >> l >> r;
-    int total_steps = 0;
-
-    vector<ll> numbers(r - l + 1);
-
-    // Initialize numbers array with values from l to r
-    for (int n = l; n <= r; ++n) {
-        numbers[n - l] = n;
+int power(int a, int b) {
+    int res = 1;
+    while(b) {
+        if(b & 1) res = (res * a) % mod;
+        a = (a * a) % mod;
+        b >>= 1;
     }
-
-    // Use two pointers to manage the range of numbers to process
-    int left = 0;
-    int right = 1;
-
-    // Process the array with two pointers
-    while (right < numbers.size()) {
-        if (numbers[right] == 0 && numbers[left] == 0) {
-            left++;
-            right++;
-        } else if (numbers[right] == 0) {
-            numbers[left] = numbers[left] / 3;
-            numbers[right] *= 3;
-            total_steps++;
-        } else {
-            numbers[right] = numbers[right] / 3;
-            numbers[left] *= 3;
-            total_steps++;
-        }
-    }
-
-    // Output the result for the current test case
-    cout << total_steps << endl;
+    return res;
 }
 
-int main() {
+int inv(int a) {
+    return power(a, mod - 2);
+}
+
+int ncr(int n, int r) {
+    int res = 1;
+    for(int i = 1; i <= r; i++) {
+        res = (res * (n - i + 1)) % mod;
+        res = (res * inv(i)) % mod;
+    }
+    return res;
+}
+
+int32_t main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
     int t;
     cin >> t;
+    while(t--) {
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for(int i = 0; i < n; i++) {
+            cin >> a[i];
+        }
 
-    // Process each test case
-    while (t--) {
-        solve();
+        int ans = 1;
+        for(int i = 1; i <= n; i++) {
+            int cnt = 0;
+            for(int j = 0; j < n; j++) {
+                if(a[j] >= i) cnt++;
+            }
+            ans = (ans * ncr(cnt, cnt)) % mod;
+        }
+
+        cout << ans << endl;
     }
 
     return 0;

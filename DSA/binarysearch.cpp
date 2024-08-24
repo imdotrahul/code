@@ -35,6 +35,7 @@ bool binarysearch(int arr[],int size, int key)//only applied on the sorted array
 
 }
 
+
 int main()
 {
     int n;

@@ -116,7 +116,4 @@ int main()
 
     printlinklist(head);
 
-    
-
-
 }

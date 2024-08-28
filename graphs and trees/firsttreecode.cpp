@@ -16,12 +16,11 @@ Node* createnode(Node* root, int data)
     n->right=NULL;
     if(root==NULL)
     {
-        root1 = n;
         root = n;
 
     }
     else{
-        Node *ptr = root1;
+        Node *ptr = root;
         if(ptr->data < data && ptr->left==NULL)
         {
             ptr->left=n;
@@ -36,7 +35,7 @@ Node* createnode(Node* root, int data)
             ptr->right=n;
             
         }
-        else if(ptr->data>data && ptr->left!=NULL)
+        else if(ptr->data>data && ptr->right!=NULL)
         {
             createnode(ptr->right,data);
         }
@@ -53,7 +52,7 @@ Node* createnode(Node* root, int data)
     // cout << "Enter data to be inserted at right" << data << endl;
     // root -> right = createnode(root -> right);
     // return root;
-    return root1;
+    return root;
 
 }
 
@@ -89,7 +88,7 @@ int main()
     int numberofnodes;
     cout<<"Enter the number of nodes: ";
     cin>>numberofnodes;
-    Node*head;
+    Node*head= NULL;
     while(numberofnodes--)
     {
         int data;

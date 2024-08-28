@@ -160,6 +160,26 @@ Node* deletenode(Node*head, int val)
     return head;
 }
 
+int commonAncestor(Node*head,int a ,int b)
+{
+    if(head == NULL)
+    {
+        return 0;
+    }
+    
+    else if(a<head->data&& b<head->data)
+    {
+        return commonAncestor(head->left,a,b);
+    }
+    else if (a>head->data&& b>head->data){
+        return commonAncestor(head->right,a,b);
+    }
+    else{
+        return head->data;
+    }
+    
+}
+
 int main()
 {
     int numberofnodes;
@@ -184,9 +204,10 @@ int main()
     //findmaximum(head);
     //findminimum(head);
 
-    deletenode(head,10);
+    //deletenode(head,10);
 
-    Inorder(head);
+    //Inorder(head);
+    cout<<commonAncestor(head,5,35);
 
 
 

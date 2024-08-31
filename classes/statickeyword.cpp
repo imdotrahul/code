@@ -13,17 +13,17 @@ class Entity{
 
 };
 
-
+int Entity:: x;
+int Entity:: y;
 int main()
 {
-    Entity e;
-    e.x=2;
-    e.y = 3;
+    Entity::x=2;
+    Entity::y = 3;
     Entity e1;
-    e1.x = 5;
-    e1.y = 6;
+    Entity::x = 5;
+    Entity::y = 6;
 
-    e.functionn();
-    e1.functionn();
+    Entity::functionn();
+    Entity::functionn();
 
 }

@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+// a static can variable can be accessed by the non static member function of the class
+// a static function only have access to the static variables of the class
+
 class Entity{
     public:
     static int x,y;

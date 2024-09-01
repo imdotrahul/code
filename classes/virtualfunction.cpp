@@ -1,37 +1,42 @@
 #include<iostream>
 using namespace std;
 
-class Rahul{
+
+class Entity{
     public:
-        string name()
-        {
-            return "Rahul";
-        }
+
+    virtual string getname()
+    {
+        return "Entity";
+    }
 };
 
-class Yadav:public Rahul{
+class Player : public Entity{
     private:
-        string myname;
-    public: 
-        Yadav(string name){
-            this->myname= name;
-        }
+    string myname;
 
-        string name()
+    public:
+        Player(string name)
+        {
+            myname = name;
+        } 
+
+        string getname() override
         {
             return myname;
         }
-
 };
+
+void print(Entity*e)
+{
+
+    cout<<e->getname()<<" ";
+}
 
 int main()
 {
-
-    Rahul r;
-    cout<<r.name()<<" ";
-    Yadav y("Rahul Yadav");
-
-    cout<<y.name()<<" ";
-
-
+    Entity* e= new Entity();
+    Player*p = new Player("Cherno");
+    print(e);
+    print(p);
 }

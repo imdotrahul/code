@@ -15,7 +15,6 @@ class Animal{
         }
 };
 
-
 int main()
 {
     Animal h;

@@ -1,36 +1,35 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+class car {
 
-class cookie {
-    private:
-    bool userdefaultshape;
-    string defaultshape = "ma chumda shape";
+    int tire, engine;
+
     public:
-        void welcome()
-        {
-            cout<<"hello define the shape of your cookie"<<"\n";
-        }
-        string shape(string providedshape)
-        {
-            cout<<"if you want to use default shape press 1 else press 0: ";
-            cin>>userdefaultshape;
-
-            if(userdefaultshape)
-            {
-                return defaultshape;
-            }
-            else{
-                return providedshape;
-            }
-        }
-
-
+     car()
+     {
+        tire = 4;
+        engine = 1;
+     }
+     car(int a, int b) 
+     {
+        tire = a;
+        engine = b;
+    
+    }
+    
+     void display ()
+     {
+        cout<<tire << engine;
+     }
+     
 };
-
+ 
 int main()
 {
-    cookie c1;
-    c1.welcome();
-    cout<<c1.shape("boba tea shape");
+    car c1; //object for car 1
+    car c2(10,20); // object for car 2
+    c1.display();
+    c2.display();
+
 }
